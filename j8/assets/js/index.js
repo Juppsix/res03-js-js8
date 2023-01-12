@@ -33,12 +33,75 @@ console.log(availableIngredients);
 
 for(let i = 0; i < availableIngredients.length; i++)
 {
-    let li = document.createElement("li");
-    let article= document.createElement("article");
-    let header = document.createElement("header");
+    
+    // <!--<li>-->
+    // <!--    <article>-->
+    // <!--        <header>-->
+    // <!--            <figure>-->
+    // <!--                <img src="assets/img/bacon.png" alt="Bacon" />-->
+    // <!--            </figure>-->
+    // <!--            <h3>Bacon</h3>-->
+    // <!--        </header>-->
+    // <!--    </article>-->
+    // <!--</li>-->
+    
+    // let section1 = document.getElementById('stage');
+    // let ul = document.getElementById('ul1')
+    
+    // let li = document.createElement("li");
+    // let article= document.createElement("article");
+    // let header = document.createElement("header");
+    // let figure = document.createElement("figure");
+    // let img = document.createElement("img");
+    // let h3 = document.createElement("h3");
+    
+    // img.setAttribute("src", availableIngredients[i].file);
+    // img.setAttribute("alt", availableIngredients[i].name);
+    
+    // let h3text = document.createTextNode(availableIngredients[i].name);
+    // h3.appendChild(h3text);
+    
+    // ul.appendChild(li);
+    // li.appendChild(article);
+    // article.appendChild(header);
+    // header.appendChild(figure);
+    // figure.appendChild(img);
+    
     let figure = document.createElement("figure");
     let img = document.createElement("img");
+    
+    img.setAttribute("src", availableIngredients[i].file);
+    img.setAttribute("alt", availableIngredients[i].name);
+    figure.appendChild(img);
+    
     let h3 = document.createElement("h3");
+    let h3name = document.createTextNode(availableIngredients[i].name)
+    h3.appendChild(h3name)
+    
+ 
+//  let listEltFigure = document.createElement("figure");
+//         let listEltImg = document.createElement("img");
+//         listEltImg.setAttribute("src", availableIngredients[i].file);
+//         listEltImg.setAttribute("alt", availableIngredients[i].name);
+//         listEltFigure.appendChild(listEltImg);
+        
+//         let listEltTitle = document.createElement("h3");
+//         let listEltName = document.createTextNode(availableIngredients[i].name);
+//         listEltTitle.appendChild(listEltName);
+        
+//         let listEltArticleHeader = document.createElement("header");
+//         listEltArticleHeader.appendChild(listEltFigure);
+//         listEltArticleHeader.appendChild(listEltTitle);
+        
+//         let listEltArticle = document.createElement("article");
+//         listEltArticle.appendChild(listEltArticleHeader);
+        
+//         let listElt = document.createElement("li");
+//         listElt.appendChild(listEltArticle);
+        
+//         let list = document.querySelector("#stage > ul");
+//         list.appendChild(listElt);
+    }
 }
 
 });
