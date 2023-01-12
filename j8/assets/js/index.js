@@ -67,6 +67,7 @@ for(let i = 0; i < availableIngredients.length; i++)
     // header.appendChild(figure);
     // figure.appendChild(img);
     
+    
     let figure = document.createElement("figure");
     let img = document.createElement("img");
     
@@ -75,34 +76,26 @@ for(let i = 0; i < availableIngredients.length; i++)
     figure.appendChild(img);
     
     let h3 = document.createElement("h3");
-    let h3name = document.createTextNode(availableIngredients[i].name)
-    h3.appendChild(h3name)
+    let h3name = document.createTextNode(availableIngredients[i].name);
+    h3.appendChild(h3name);
+    
+    let header = document.createElement("header");
+    header.appendChild(figure);
+    header.appendChild(h3)
+    
+    let article = document.createElement("article");
+    article.appendChild(header);
+    
+    let li = document.createElement("li");
+    li.appendChild(article);
+    
+    let list = document.querySelector("#stage > ul");
+    list.appendChild(li);
     
  
-//  let listEltFigure = document.createElement("figure");
-//         let listEltImg = document.createElement("img");
-//         listEltImg.setAttribute("src", availableIngredients[i].file);
-//         listEltImg.setAttribute("alt", availableIngredients[i].name);
-//         listEltFigure.appendChild(listEltImg);
-        
-//         let listEltTitle = document.createElement("h3");
-//         let listEltName = document.createTextNode(availableIngredients[i].name);
-//         listEltTitle.appendChild(listEltName);
-        
-//         let listEltArticleHeader = document.createElement("header");
-//         listEltArticleHeader.appendChild(listEltFigure);
-//         listEltArticleHeader.appendChild(listEltTitle);
-        
-//         let listEltArticle = document.createElement("article");
-//         listEltArticle.appendChild(listEltArticleHeader);
-        
-//         let listElt = document.createElement("li");
-//         listElt.appendChild(listEltArticle);
-        
-//         let list = document.querySelector("#stage > ul");
-//         list.appendChild(listElt);
-    }
-}
 
+    }
 });
+
+
 
